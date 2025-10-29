@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bappy — Portfolio</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --muted:#9aa5b1;
+      --accent:#7c5cff;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    body{
+      background: linear-gradient(180deg,var(--bg) 0%, #071025 100%);
+      color:#e6eef8;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:var(--accent)}
+    header.navbar{
+      background: rgba(10,14,20,0.6);
+      backdrop-filter: blur(6px);
+    }
+    .brand{
+      font-weight:700;
+      letter-spacing:0.4px;
+    }
+    .hero{
+      padding:60px 0;
+    }
+    .hero .intro{
+      max-width:680px;
+    }
+    .btn-accent{
+      background:linear-gradient(90deg,var(--accent),#6bd4ff);
+      border:0;
+      color:#061420;
+      font-weight:600;
+    }
+    .card-dark{
+      background: linear-gradient(180deg,var(--card), rgba(7,12,20,0.5));
+      border: 1px solid rgba(255,255,255,0.03);
+      color:var(--muted);
+    }
+    .skill-bar{
+      height:10px;
+      background: rgba(255,255,255,0.04);
+      border-radius:10px;
+      overflow:hidden;
+    }
+    .skill-bar > span{
+      display:block;
+      height:100%;
+      background: linear-gradient(90deg,var(--accent), #3ad6ff);
+      border-radius:10px;
+    }
+    .project-card img{max-height:160px; object-fit:cover}
+    footer{padding:30px 0; color:var(--muted);}
+    /* responsive tweaks */
+    @media (max-width:767px){
+      .hero{padding:40px 0}
+    }
+    /* small utility */
+    .muted{color:var(--muted)}
+    .chip{background:var(--glass); padding:6px 10px; border-radius:999px; color:var(--muted); font-weight:600}
+    .form-success{display:none}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar sticky-top">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg p-0">
+      <a class="navbar-brand brand text-white me-3" href="#">Bappy</a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"><i class="bi bi-list" style="font-size:1.25rem;color:#cfe8ff"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-3">
+          <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="intro">
+          <p class="chip mb-3">Full‑stack & Frontend</p>
+          <h1 class="display-6 text-white">Hi, I'm <span style="color:var(--accent)">Bappy</span></h1>
+          <p class="muted">I build responsive web interfaces and small JavaScript applications. I love clean code, simple UI, and fast performance.</p>
+          <div class="mt-4 d-flex gap-2">
+            <a href="#projects" class="btn btn-accent">See Projects</a>
+            <a href="#contact" class="btn btn-outline-light">Contact Me</a>
+          </div>
+          <div class="mt-4 muted small">Based in Bangladesh • Available for freelance</div>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+        <div class="card card-dark p-4" style="border-radius:14px; max-width:420px; margin-left:auto">
+          <img src="./image/WhatsApp Image 2025-10-29 at 11.00.18 AM.jpeg" alt="Bappy" class="img-fluid rounded mb-3">
+          <h5 class="text-white">Bappy</h5>
+          <p class="muted small">Frontend developer — HTML, CSS, Bootstrap, JavaScript</p>
+          <div class="d-flex gap-2 mt-3">
+            <a class="btn btn-sm btn-outline-light" href="https://github.com/bappybpy" target="_blank">Protfolio</a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-md-6">
+        <div class="card card-dark p-4">
+          <h3 class="text-white">About Me</h3>
+          <p class="muted">I'm Bappy — a web developer focused on creating fast, accessible, and responsive interfaces. I enjoy turning design ideas into working websites and small web apps using modern HTML, CSS and JavaScript.</p>
+          <ul class="muted small">
+            <li>Good at creating responsive layouts</li>
+            <li>Experience with Bootstrap & Flexbox</li>
+            <li>JS for interaction and validation</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card card-dark p-4">
+          <h5 class="text-white">Experience</h5>
+          <div class="muted small">Frontend Developer — Freelance (2022 - Present)</div>
+          <hr>
+          <h6 class="text-white small mb-2">Education</h6>
+          <div class="muted small">General / Islamic history and culture honours 1st year</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-5">
+  <div class="container">
+    <h3 class="text-white mb-4">Skills</h3>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card card-dark p-4">
+          <h6 class="text-white">HTML & CSS <small class="muted">90%</small></h6>
+          <div class="skill-bar mb-3"><span style="width:90%"></span></div>
+          <h6 class="text-white">JavaScript <small class="muted">75%</small></h6>
+          <div class="skill-bar mb-3"><span style="width:75%"></span></div>
+          <h6 class="text-white">Bootstrap <small class="muted">85%</small></h6>
+          <div class="skill-bar mb-3"><span style="width:85%"></span></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card card-dark p-4">
+          <h6 class="text-white">Tools</h6>
+          <div class="d-flex flex-wrap gap-2 mt-2">
+            <span class="chip">VS Code</span>
+            <span class="chip">Git</span>
+            <span class="chip">Chrome DevTools</span>
+            <span class="chip">Figma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+
+<!-- CONTACT -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h3 class="text-white mb-4">Contact</h3>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card card-dark p-4">
+          <form id="contactForm" novalidate>
+            <div class="mb-3">
+              <label class="form-label text-white">Name</label>
+              <input type="text" id="name" class="form-control bg-transparent text-white border-secondary" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-white">Email</label>
+              <input type="email" id="email" class="form-control bg-transparent text-white border-secondary" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-white">Message</label>
+              <textarea id="message" rows="4" class="form-control bg-transparent text-white border-secondary" required></textarea>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-accent" type="submit">Send Message</button>
+              <button class="btn btn-outline-light" type="reset">Reset</button>
+            </div>
+            <div class="alert alert-success mt-3 form-success" role="alert">Thanks — your message has been sent (demo).</div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card card-dark p-4">
+          <h6 class="text-white">Contact Info</h6>
+          <p class="muted small">Email: <a href="mailto:bappy@example.com">bappy@example.com</a></p>
+          <p class="muted small">Location: Bangladesh</p>
+          <hr>
+          <h6 class="text-white">Quick Links</h6>
+          <div class="d-flex gap-2 mt-2">
+            <a class="chip" href="#">Download CV</a>
+            <a class="chip" href="#">GitHub</a>
+            <a class="chip" href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="mt-5">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div>© <strong>Bappy</strong> — <span class="muted small">2025</span></div>
+    <div class="muted small">Built with Bootstrap</div>
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', function(e){
+      const target = document.querySelector(this.getAttribute('href'));
+      if(target){
+        e.preventDefault();
+        target.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    });
+  });
+
+  // Contact form demo validation
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const message = document.getElementById('message');
+    // simple validation
+    if(!name.value.trim() || !email.value.trim() || !message.value.trim()){
+      alert('Please fill all fields');
+      return;
+    }
+    // basic email check
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\\.,;:\s@\"]+\.)+[^<>()[\]\\.,;:\s@\"]{2,})$/i;
+    if(!re.test(email.value)){
+      alert('Enter a valid email');
+      return;
+    }
+    // Show demo success
+    const success = document.querySelector('.form-success');
+    success.style.display = 'block';
+    form.reset();
+    setTimeout(()=> success.style.display='none', 4000);
+  });
+
+  // small accessibility: focus state for keyboard users
+  document.addEventListener('keyup', function(e){
+    if(e.key === 'Tab') document.body.classList.add('user-is-tabbing');
+  });
+</script>
+</body>
+</html>
